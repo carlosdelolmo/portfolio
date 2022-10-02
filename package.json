@@ -29,6 +29,7 @@
     "gulp-wait": "0.0.2"
   },
   "dependencies": {
-    "gulp-less": "^5.0.0"
+    "gulp-less": "^5.0.0",
+    "typed.js": "^2.0.12"
   }
 }

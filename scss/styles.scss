@@ -35,7 +35,8 @@
 
 // Define base and accent colors
 // $base-color: #3498db;
-$base-color: #33cccc;
+$base-color: #a98aff;
+$secondary-color: #ffffff;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -296,16 +297,17 @@ footer {
 .btn-rounded-white {
     display: inline-block;
     // color: #fff;
-    color: #ffcc66;
+    color: $secondary-color;
     padding: 15px 25px;
-    border: 3px solid #ffcc66;
+    border: 3px solid $secondary-color;
     border-radius: 30px;
     @include transition();
 
     &:hover {
         color: $base-color;
         // background: #fff;
-        background: #ffcc66;
+        background: $secondary-color;
+        box-shadow: 0 0 10px $secondary-color, 0 0 40px $secondary-color, 0 0 80px $secondary-color;
         text-decoration: none;
     }
 }
@@ -323,6 +325,7 @@ footer {
         color: #fff;
         // background: #fff;
         background: $base-color;
+        box-shadow: 0 0 5px $base-color, 0 0 20px  $base-color, 0 0 40px $base-color;
         text-decoration: none;
     }
 }
@@ -370,7 +373,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/fondo.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
