@@ -48,6 +48,7 @@ $border: #dcd9d9;
 
 // Define text colors
 $heading: #374054;
+// $heading: $base-color;
 $text: #74808a;
 
 /*
@@ -294,6 +295,7 @@ footer {
     }
 }
 
+
 .btn-rounded-white {
     display: inline-block;
     // color: #fff;
@@ -329,6 +331,8 @@ footer {
         text-decoration: none;
     }
 }
+
+
 
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -760,10 +764,30 @@ footer {
         margin: 7px;
         padding: 5px 10px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        // background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+        // border-radius: 25px;
+        img{
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }
+    li:hover{
+        // color: darken($background-alt, 5%);
+        // background: #fff;
+        $lighting-color: darken($background-alt, 5%);
+        background: $lighting-color;
+        border-radius: 25px;
+        box-shadow: 0 0 1px $lighting-color, 0 0 10px  $lighting-color, 0 0 20px $lighting-color;
+        text-decoration: none;
+        a{
+            color: darken($background-alt, 5%);
+        }
+    }
+    a{
+        color: $heading;
     }
 }
 
@@ -949,7 +973,7 @@ footer {
         text-align: center;
 
         p {
-            text-align: left;
+            text-align: justify;
         }
     }
 
