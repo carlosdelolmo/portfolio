@@ -322,7 +322,6 @@ footer {
     border-radius: 20px;
     margin-bottom: 10px;
     @include transition();
-
     &:hover {
         color: #fff;
         // background: #fff;
@@ -722,6 +721,18 @@ footer {
         margin: 0 0 15px 0;
         font-size: 0.9em;
     }
+    img{
+         max-height: 50px;
+         max-width: 50px;
+        @include transition();
+        &:hover{
+            // $lighting-color: darken($background-alt, 5%);
+            $lighting-color: $base-color;
+            background: $lighting-color;
+            border-radius: 25px;
+            box-shadow: 0 0 1px $lighting-color, 0 0 10px  $lighting-color, 0 0 20px $lighting-color;
+        }
+    }
 }
 
 .no-image {
@@ -769,21 +780,23 @@ footer {
         cursor: default;
         font-size: 1.2em;
         // border-radius: 25px;
-        img{
+        img {
             max-width: 50px;
             max-height: 50px;
         }
-    }
-    li:hover{
-        // color: darken($background-alt, 5%);
-        // background: #fff;
-        $lighting-color: darken($background-alt, 5%);
-        background: $lighting-color;
-        border-radius: 25px;
-        box-shadow: 0 0 1px $lighting-color, 0 0 10px  $lighting-color, 0 0 20px $lighting-color;
-        text-decoration: none;
-        a{
-            color: darken($background-alt, 5%);
+        @include transition();
+        &:hover {
+            // color: darken($background-alt, 5%);
+            // background: #fff;
+            $lighting-color: darken($background-alt, 5%);
+            background: $lighting-color;
+            border-radius: 25px;
+            box-shadow: 0 0 1px $lighting-color, 0 0 10px $lighting-color, 0 0 20px $lighting-color;
+            text-decoration: none;
+
+            a {
+                color: darken($background-alt, 5%);
+            }
         }
     }
     a{
